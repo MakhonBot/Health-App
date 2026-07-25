@@ -1,0 +1,120 @@
+<html>
+
+<head>
+    <link href="style.css" rel="stylesheet">
+    <title>Health App - Business Proposal</title>
+</head>
+
+<body>
+    <header>
+        <center>
+            <section>
+                <img src="healthapp.JPG" style="width: 500px;">
+            </section>
+        </center>
+    <div class="topnav">
+        <a class="stuff active" href="home.html">Home</a>
+        <a class="stuff" href="skincare.html">Skincare</a>
+        <a class="stuff" href="exercise.html">Exercise</a>
+        <a class="stuff" href="nutrition.html">Nutrition</a>
+        <a class="stuff" href="habits.html">Habits</a>
+    </div>
+    </header>
+    <main>
+        <center>
+        <section>
+            <p id="wlc">Welcome to Health App!</p>
+            <p id="crt" style="padding: 10;">Create an account?</p>
+            <a id="buttons" href="create.html" style="padding: 5;">Create</a>
+        </section>
+        <section>
+            <p style="background-color: rgb(33, 117, 8); color: aliceblue; padding: 5;">Take care of your body, skin, and mind--<b>one at a time.</b></p>
+        </section>
+        <br><br>
+        <section>
+            <h3>* Your health journey starts here 🌱</h3>
+            
+            <p style="padding: 20;">
+                <b>Health App</b> helps you build healthier habits through <u><b>skincare,
+                exercise, nutrition, and daily routines.</b></u>
+            </p>
+        </section>
+        <br><br>
+        <section>
+            <h3 style="background-color: rgb(33, 117, 8); color: aliceblue; padding: 5; text-decoration: underline;">* ✨About our pages:</h3>
+            <h3 style="background-color: rgb(180, 0, 0); color: white; padding: 5;">~ Skincare ~</h3>
+            <ul style="background-color: rgb(219, 16, 16); color: white;">
+                <li>Take care of facial acne, pimples, and/or dryness.</li>
+                <li>Find out your skin type.</li>
+                <li>Find the best products for your skin and what to avoid.</li>
+                <li>Try cheap skincare routines.</li>
+            </ul>
+            <br>
+            <h3 style="background-color: rgb(180, 0, 0); color: white; padding: 5;">~ Exercise ~</h3>
+            <ul style="background-color: rgb(219, 16, 16); color: white;">
+                <li>Try workouts for your body type.</li>
+                <li>Stay fit and strong.</li>
+                <li>Achieve your desired body.</li>
+                <li>Be in a better state of mind.</li>
+            </ul>
+            <br>
+            <h3 style="background-color: rgb(180, 0, 0); color: white; padding: 5;">~ Nutrition ~</h3>
+            <ul style="background-color: rgb(219, 16, 16); color: white;">
+                <li>Find out what your body is missing to be healthy.</li>
+                <li>Understand the necessity of foods.</li>
+                <li>Build a better diet.</li>
+                <li>Have a better eating habit.</li>
+            </ul>
+            <br>
+            <h3 style="background-color: rgb(180, 0, 0); color: white; padding: 5;">~ Habits ~</h3>
+            <ul style="background-color: rgb(219, 16, 16); color: white;">
+                <li>Fix unnecessary, lazy habits.</li>
+                <li>Find productive activities to do in your leisure.</li>
+                <li>Enjoy a better lifestyle.</li>
+                <li>Figure out your interests.</li>
+            </ul>
+        </section>
+        <br><br>
+        <section>
+            <h3 style="padding: 10; text-decoration: underline;">* Get a look on your health.</h3>
+            <a id="buttons" style="padding: 5;" href="test.html"><i>Assess yourself.</i></a>
+        </section>
+        <br><br>
+        <section>
+            <h3 style="background-color: rgb(33, 117, 8); color: aliceblue; padding: 5; text-decoration: underline;">* Images to inspire you 💡</h3>
+            <br>
+            <img src="skncr.JPG" style="width: 200;padding: 20;">
+            <br>
+            <img src="skncr2.JPG" style="width: 200; padding: 20;">
+            <br>
+            <img src="ftns.JPG"  style="width: 200; padding: 20;">
+            <br>
+            <img src="ftns2.JPG" style="width: 200; padding: 20;">
+            <br>
+            <img src="hbts.JPG" style="width: 200; padding: 20;">
+            <br>
+            <img src="hbts2.JPG" style="width: 200; padding: 20;">
+            <br>
+            <img src="ntrnts.JPG" style="width: 200; padding: 20;">
+            <br>
+            <img src="ntrnts2.JPG" style="width: 200; padding: 20;">
+            <br>
+        </section>
+        </center>
+    </main>
+    <script>
+        let data = new URLSearchParams(window.location.search);
+        let name = data.get("name");
+        if (name) {
+                document.getElementById("wlc").innerHTML =
+                    "Welcome back, " + name + "!";
+                document.getElementById("crt").innerHTML = "Account successfully created!"
+                document.getElementById("buttons").innerHTML = "Change username/password"
+                
+            } else {
+                document.getElementById("wlc").innerHTML =
+                    "Welcome to Health App!";
+            }
+    </script>
+</body>
+</html>

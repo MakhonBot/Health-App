@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <link href="style.css" rel="stylesheet">
+    <title>Health App - Business Proposal</title>
+</head>
+
+<body>
+    <center>
+        <section>
+        <img src="healthapp.JPG" style="width: 500px;">
+        <br>
+        <p>Let's calculate your BMI.</p>        
+        <p style="background-color: navy;color: white;"><b>What is BMI?</b><br>* <u>BMI</u> or <u>Body Mass Index</u> is a simple tool that uses your height and weight (in centimeters and kilograms, respectively) to estimate if your body weight is healthy. <br>*It divides your weight in kg by your height in meters squared.</p>
+        <h3>Important limits of BMI:</h3>
+        <ul>
+            <li><b>No muscle distinction:</b> it cannot tell the difference between heavy muscle and body fat.</li>
+            <li><b>No fat placement:</b> It does not show where the fat is in your body.</li>
+            <li><b>General guide only:</b>It is a fast screening tool; not a full check on personal health.</li>
+        </ul>
+        <h3>BMI categories:</h3>
+        <ul>
+            <li><b>Underweight:</b> A score below 18.5</li>
+            <li><b>Normal weight:</b> A score from 18.5 to 24.9</li>
+            <li><b>Overweight:</b> A score from 25 to 29.9</li>
+            <li><b>Obese:</b>A score of 30 or higher</li>
+        </ul>
+        <label style="background-color: white; color: darkslategrey; font-size: 20;">Weight (kg):</label>
+        <input type="number" id="weight">
+        <br>
+        <label style="background-color: white; color: darkslategrey;  font-size: 20;">Height (cm):</label>
+        <input type="number" id="height">
+        <br>
+        <br>
+        <button id="calculateButton" style="background-color: white; color: darkslategrey;  font-size: 20;">Calculate</button>
+        <br>
+        <p id="result"></p>
+        <p>Remember this information!</p>
+        <a id="home" href="home.html" style="color: rgb(255, 255, 255);
+    background-color: rgb(221, 126, 142);
+    font-size: 20;"></a>
+        </section>
+    </center>
+    <script>
+        const weightInput = document.getElementById("weight");
+            const heightInput = document.getElementById("height");
+            const calculateButton = document.getElementById("calculateButton");
+            const result = document.getElementById("result");
+            const home = document.getElementById("home");
+
+            calculateButton.addEventListener("click", function () {
+
+                let weight = Number(weightInput.value);
+                let height = Number(heightInput.value);
+
+                let heightInMetres = height / 100;
+
+                let bmi = weight / (heightInMetres * heightInMetres);
+
+                bmi = bmi.toFixed(1);
+
+                result.textContent = `Your BMI is ${bmi}`;
+                document.getElementById("home").innerHTML="Home page";
+            });
+    </script>
+</body>
+
+</html>

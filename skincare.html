@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <title>Health App - Business Proposal</title>
+        <style>
+            p {
+                padding: 5;
+            }
+            select {
+                background-color: rgb(252, 255, 212);
+                color: rgb(82, 57, 38);
+                font-family:'Times New Roman', Times, serif;
+                font-style: italic;
+                font-size: 20;
+            }
+            button {
+                color: rgb(255, 255, 255);
+                background-color: rgb(221, 126, 142);
+                font-size: 20;
+                border: 0cap;
+                margin: 10;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <header>
+            <center>
+                <section>
+                    <img src="healthapp.JPG" style="width: 500px;">
+                </section>
+            </center>
+            <div class="topnav">
+                <a class="stuff" href="home.html">Home</a>
+                <a class="stuff active" href="skincare.html">Skincare</a>
+                <a class="stuff" href="exercise.html">Exercise</a>
+                <a class="stuff" href="nutrition.html">Nutrition</a>
+                <a class="stuff" href="habits.html">Habits</a>
+            </div>
+        </header>
+        <main>
+            <center>
+            <section>
+                <p>Taking care of your skin is the first step to enjoy a healthy life.<br>* Let's find your skincare based on your type.💭</p>
+            </section>
+            <br><br>
+            <section>
+                <p style="background-color: navy; color: white; text-decoration: underline;font-size: larger;"><b>* What are skin types?</b></p>
+                <ul style="color: navy; background-color: rgb(255, 255, 255);font-size: larger; padding: 5;">
+                    <li><b>Normal skin:</b> Well-balanced, clear, smooth, and not too oily or dry.</li>
+                    <li><b>Oily skin:</b> Produces excess sebum, leading to a glossy shine, enlarged pores, and acne.</li>
+                    <li><b>Dry skin:</b> Produces less sebum; often feels tight, rough, or flaky.</li>
+                    <li><b>Combination skin:</b> Mix of oily and dry areas, usually with an oily T-zone (forehead, nose, chin) and normal-to-dry cheeks.</li>
+                    <li><b>Sensitive skin:</b> Reacts easily with redness, itching, or burning when exposed to certain products or triggers.</li>
+                </ul> 
+            </section>
+            <br><br>
+            <section>
+                <select id="skinType">
+                    <option value="">Select your skin type</option>
+                    <option value="oily">Oily Skin</option>
+                    <option value="dry">Dry Skin</option>
+                    <option value="combination">Combination Skin</option>
+                    <option value="normal">Normal Skin</option>
+                    <option value="sensitive">Sensitive Skin</option>
+                </select><br>
+                
+                <button type="button" onclick="showRoutine()">Show My Routine</button>
+                
+                <p id="routine"></p>
+            </section>
+            <br><br>
+            <section>
+                <h3 style="text-decoration: underline; padding: 5;">* A general, suitable routine for almost everyone 🤍:</h3>
+                <ol style="color: rgb(82, 57, 38); background-color: rgb(255, 255, 255);font-size: larger; padding: 5; font-style: italic;">
+                    <li>Use a gentle cleanser to wash off dirt and sebum.</li>
+                    <li>Use a fragrance-free moisturizer, especially in dry areas of skin.</li>
+                    <li>Use a sunscreen (SPF 50+) before going out in the sun.</li>
+                    <li>Use a lip balm on the lips.</li>
+                    <li>Keep hydrated! </li>
+                </ol>
+            </section>
+            </center>
+        </main>
+        <script>
+            function showRoutine() {
+
+                let skinType = document.getElementById("skinType").value;
+                let routine = "";
+
+                if (skinType == "oily") {
+                    routine = "For oily skin: use a gentle cleanser, a lightweight moisturizer, and sunscreen.";
+                }
+
+                else if (skinType == "dry") {
+                    routine = "For dry skin: use a gentle cleanser, a hydrating moisturizer, and sunscreen.";
+                }
+
+                else if (skinType == "combination") {
+                    routine = "For combination skin: use gentle products and focus on balancing different areas of the face.";
+                }
+
+                else if (skinType == "normal") {
+                    routine = "For normal skin: maintain a simple routine with cleansing, moisturizing, and sunscreen.";
+                }
+
+                else if (skinType == "sensitive") {
+                    routine = "For sensitive skin: choose gentle, fragrance-free products and introduce new products slowly.";
+                }
+
+                document.getElementById("routine").innerHTML = routine;
+            }
+        </script>
+    </body>
+</html>

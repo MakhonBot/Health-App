@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <title>Health App - Business Proposal</title>
+    </head>
+    <body>
+        <center>
+            <section>
+                <img src="healthapp.JPG" style="width: 500px;">
+            </section>
+            <br><br>
+            <section>
+                <h3>* Understand Your Body</h3>
+                
+                <p style="padding: 5;">
+                    This assessment provides a <u>general estimate</u> based on the information you enter. <br><br>
+                    It is designed to help you learn more about your body and lifestyle.
+                </p>
+            </section>
+            <br>
+        <section><p>
+            BMI is a general measurement calculated using your height and weight.
+            It can provide a basic overview, but it does not tell the complete story
+            about a person's health.
+        </p>
+        
+        <p>
+            Recommended calorie intake is an estimate of the energy your body may need
+            each day. Your actual needs can vary depending on factors such as age,
+            activity level, growth, and lifestyle.
+        </p></section><br><br>
+        <section>
+            <label id="p" style="margin: 5;">Weight</label>
+                <input type="number" id="weight"><br>
+            <label id="p" style="margin: 5;">Height</label>
+                <input type="number" id="height"><br>
+                
+                <select id="activity" style="
+    background-color: rgb(252, 255, 212);
+    color: rgb(82, 57, 38);
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 20; border: 0cap; margin: 5;">
+                    <option value="">Choose activity level</option>
+                    <option value="1.2">Sedentary</option>
+                    <option value="1.375">Lightly active</option>
+                    <option value="1.55">Moderately active</option>
+                    <option value="1.725">Very active</option>
+                </select> <br>
+                
+                <button type="button" id="buttons" style="border: 0cap; margin: 10;" onclick="calculate()">Calculate</button>
+                
+                <p style="
+    background-color: rgb(252, 255, 212);
+    color: rgb(82, 57, 38);
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 20;" id="result"></p>
+        </section>
+        <br><br>
+        <section>
+            <p>
+                <strong>Note:</strong> These results are estimates intended for educational
+                purposes and should not be treated as medical advice.
+            </p>
+        </section>
+        <section>
+            <a id="buttons" href="home.html">Back to home page</a>
+        </section>
+        </center>
+        <script>
+                function calculate() {
+
+                    let weight = document.getElementById("weight").value;
+                    let height = document.getElementById("height").value;
+                    let activity = Number(document.getElementById("activity").value);
+
+                    height = height / 100;
+
+                    let bmi = weight / (height * height);
+
+                    bmi = bmi.toFixed(1);
+
+                    let calories = weight * 24 * activity;
+                    calories = Math.round(calories);
+
+                    document.getElementById("result").innerHTML =
+                    "Your BMI is " + bmi + " Your estimated daily energy needs are around " + calories + " calories.";
+                    }
+        </script>
+    </body>
+</html>

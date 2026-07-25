@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <link href="style.css" rel="stylesheet">
+    <title>Health App - Business Proposal</title>
+</head>
+
+<body>
+    <section>
+        <center>
+        <img src="healthapp.JPG" style="width: 500px;">
+        </center>
+    </section>
+    <section>
+        <center>
+        <h3>Create Your Account</h3>
+        
+        <form style="background-color: rgb(230, 163, 226); padding: 20;">
+            <label style="background-color: rgb(189, 134, 185); color: rgb(68, 56, 40);font-family: 'Times New Roman', Times, serif; font-size: larger; padding: 5;">Username:</label>
+            <input type="text" id="A">
+        <br><br>
+            <label style="background-color: rgb(189, 134, 185); color: rgb(68, 56, 40);font-family: 'Times New Roman', Times, serif; font-size: larger; padding: 5;">Password:</label>
+            <input type="password" id="B">
+        <br><br>
+        </form>
+        <button onclick="save()"
+            style="background-color: white; color: rgb(68, 56, 40); text-decoration: none; font-size: large; padding: 5; font-family: 'Times New Roman', Times, serif;">Click
+            to save info</button>
+        <br><br>
+        </center>
+    </section>
+    <script>
+        function save() {
+            let name = document.getElementById("A").value;
+            let password = document.getElementById("B").value;
+            window.location.href = "home.html?name=" + name;
+        }
+    </script>
+</body>
+
+</html>
